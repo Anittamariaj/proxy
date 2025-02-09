@@ -1,10 +1,10 @@
 swagger: '2.0'
 info:
   version: version
-  title: title
-  x-ibm-name: name
+  title: testapi-proxy
+  x-ibm-name: testapi-proxy
   contact:
-    name: contact_name
+    name: Anitta
 basePath: /
 x-ibm-configuration:
   properties:
