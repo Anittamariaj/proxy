@@ -1,18 +1,17 @@
-
 swagger: '2.0'
 info:
-  version: 1.0.1
-  title: testapi-with-payload
-  x-ibm-name: testapi-with-payload
+  version: version
+  title: My Proxy API
+  x-ibm-name: my-proxy-api
   contact:
-    name: Ruairi
+    name: anitta@gmail.com
 basePath: /
 x-ibm-configuration:
   properties:
     target-url:
       value: https://reqres.in/api/
-      description: URL of the proxy policy
-      encoded: false
+      description: url_description
+      encoded: true
   cors:
     enabled: true
   gateway: datapower-api-gateway
@@ -57,7 +56,7 @@ x-ibm-configuration:
             - set: log.custom_data.apiTargetURL
               value: $(target-url)
               type: string
-          description: Setting the current api target URL
+          description: Setting specific collector target URL
     catch: []
     finally: []
   activity-log:
@@ -71,6 +70,36 @@ paths:
     get:
       responses:
         '200':
+          description: success
+          schema:
+            type: string
+      consumes: []
+      produces: []
+    post:
+      responses:
+        '201':
+          description: success
+          schema:
+            type: string
+      consumes: []
+      produces: []
+    put:
+      responses:
+        '201':
+          description: success
+          schema:
+            type: string
+    patch:
+      responses:
+        '200':
+          description: success
+          schema:
+            type: string
+      consumes: []
+      produces: []
+    delete:
+      responses:
+        '204':
           description: success
           schema:
             type: string
